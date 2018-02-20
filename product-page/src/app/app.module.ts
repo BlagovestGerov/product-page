@@ -4,11 +4,15 @@ import { NgModule } from '@angular/core';
 import { AlertModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
+import { ProductComponent } from './components/product/product.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProductComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
