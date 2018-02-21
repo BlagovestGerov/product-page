@@ -14,3 +14,7 @@
 .button-hover:hover {
     background-color: rgba(41, 41, 73, 0.99);
 }
+
+.product-view{
+    background-color: white;
+}
