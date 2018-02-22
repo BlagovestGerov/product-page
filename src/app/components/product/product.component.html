@@ -1,14 +1,32 @@
-<div class="product-view">
+
+           <!-- Page Content -->
+           <div class="container">
+                <h1 class="mt-5"> </h1>
+                <p>The logo in the navbar is now a default Bootstrap feature in Bootstrap 4! Make sure to set the width and height of the logo within the HTML. For best results, it's recommended that you use an SVG image as your logo.</p>
+              </div>
+        
+              <br>
+        
+              <div class="product" >
+                  <section class="py-5 bg-image-full" style="background-image: url('../../assets/images/hmel.jpg');">
+                    <!-- Put anything you want here! There is just a spacer below for demo purposes! -->
+                    <div style="height: 250px;"></div>
+                  </section>
+              </div>
+
+<div class="product-view" >
     <div class="row" >
+        <div >
+
         <div class="col-md-3"  *ngFor="let product of products">
-              <div class="thumbnail">
-                <img src="../../assets/images/beer1.jpg" alt="beer" class="img-responsive">
+              <div class="thumbnail"  >
+                <img  src="../../assets/images/beer1.jpg" alt="beer" class="img-responsive">
                 <div class="caption">
                   <h4 class="pull-right">${{product.price}}</h4>
                   <h4><a href="#">{{product.name}}</a></h4>
                   <p>{{product.description}}</p>
                 </div>
-                <div class="ratings">
+                <!-- <div class="ratings">
                   <p>
                     <span class="glyphicon glyphicon-star"></span>
                     <span class="glyphicon glyphicon-star"></span>
@@ -17,7 +35,7 @@
                     <span class="glyphicon glyphicon-star"></span>
                      (15 reviews)
                   </p>
-                </div>
+                </div> -->
                 <div class="space-ten"></div>
                 <div class="btn-ground text-center">
                     <button type="button" class="btn btn-primary button-hover"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
@@ -90,6 +108,8 @@
                     </div>
                 </div>
             </div>
+        </div>
+        
         </div>
     </div>
 </div>
