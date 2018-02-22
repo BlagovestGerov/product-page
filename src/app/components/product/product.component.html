@@ -20,9 +20,12 @@
 
         <div class="col-md-3" 
          *ngFor="let product of products"
-         routerLink="/product/detail/{{product.id}}">
+         >
               <div class="thumbnail"  >
-                <img  src="../../assets/images/beer1.jpg" alt="beer" class="img-responsive">
+                  <div class="image-hover"
+                  routerLink="/product/detail/{{product.id}}">
+                        <img  src="../../assets/images/beer1.jpg" alt="beer" class="img-responsive">                        
+                  </div>
                 <div class="caption">
                   <h4 class="pull-right">${{product.price}}</h4>
                   <h4><a href="#">{{product.name}}</a></h4>
