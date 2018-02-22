@@ -10,13 +10,16 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 
 import {AppRoutesModule} from './app-routing.module';
 import { ContactComponent } from './components/contact/contact.component';
+import { ProductService } from './core/services/product.service';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     NavbarComponent,
-    ContactComponent
+    ContactComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,7 @@ import { ContactComponent } from './components/contact/contact.component';
     AppRoutesModule,
     AlertModule.forRoot()
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
