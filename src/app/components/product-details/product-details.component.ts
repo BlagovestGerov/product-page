@@ -4,6 +4,8 @@ import { ProductModel } from '../../core/models/product';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { ProductService } from '../../core/services/product.service';
+// import { ProductComponent } from '../product/product.component';
+
 
 @Component({
   selector: 'app-product-details',
