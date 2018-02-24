@@ -16,6 +16,7 @@ import { ProductService } from '../../core/services/product.service';
 export class ProductDetailsComponent implements OnInit {
 
     product: ProductModel
+    products: ProductModel[]
     productPrice: number
     // counterValue = 5
     counterValue = 1
@@ -31,13 +32,26 @@ export class ProductDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProduct();
-    
+    this.getProducts()
   }
   
   getProduct(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.productService.getProduct(Number(id))
       .subscribe(product => this.product = product);
+  }
+  
+  getProducts(){
+    this.productService.getProducts()
+      .subscribe(data => {
+        this.successGetProducts(data);
+      },
+    )
+  }  
+  successGetProducts(data){
+    let category = this.route.snapshot.paramMap.get('category')
+    this.products = data.filter((data: ProductModel) => data.category === category);
+    // console.log(this.products)
   }
 
   customEvent(){

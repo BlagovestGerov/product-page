@@ -9,7 +9,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full'},
     { path: 'home', component: ProductComponent},
-    { path: 'product/detail/:id', component: ProductDetailsComponent },
+    { path: 'product/detail/:category/:id', component: ProductDetailsComponent },
     { path: 'contacts', component: ContactComponent },
 ]
 
