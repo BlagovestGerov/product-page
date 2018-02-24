@@ -88,8 +88,9 @@
         <div class="row justify-content-center">
                 <div class="col-md-8">
                         <div class="row"  >
-                                    <a *ngFor="let productCategory of products"
-                                    href="{{productCategory.image}}" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                                    <a 
+                                    *ngFor="let productCategory of products"
+                                    href="/product/detail/{{productCategory.category}}/{{productCategory.id}}" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
                                         <img src="{{productCategory.image}}" class="img-fluid"> <div>{{productCategory.name}}</div>
                                     </a>                       
                        
