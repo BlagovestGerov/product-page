@@ -20,7 +20,7 @@
 <div class="modal-body">
     <div class="row">
         <div class="col-md-6 product_img image-hover">
-            <img src="../../assets/images/beer1.jpg" class="img-responsive">
+            <img src="{{product.image}}" class="img-responsive">
         </div>
         <div class="col-md-6 product_content">
             <h4>{{product.name}} <span></span></h4>
@@ -33,7 +33,7 @@
                 (10 reviews)
             </div>
             <p>{{product.description}}</p>
-            <h3 class="cost"><span class="glyphicon glyphicon-usd"></span> {{product.price}} <small class="pre-cost"><span class="glyphicon glyphicon-usd"></span> 60.00</small></h3>
+            <h3 class="cost"><span class="glyphicon glyphicon-usd"></span> {{productPrice | number : '1.2-2'}} <small class="pre-cost"><span class="glyphicon glyphicon-usd"></span>{{product.price}}</small></h3>
             <div class="row">
                 <!-- <div class="col-md-4 col-sm-6 col-xs-12">
                     <select class="form-control" name="select">
@@ -56,12 +56,14 @@
                 </div> -->
                 <!-- end col -->
                 <div class="col-md-4 col-sm-12">
-                    <select class="form-control" name="select">
+                    <div>QTY</div>
+                    <!-- <select class="form-control" name="select">
                         <option value="" selected="">QTY</option>
                         <option value="">1</option>
                         <option value="">2</option>
                         <option value="">3</option>
-                    </select>
+                    </select> -->
+                    <input-counter btnClass="customClass"  inputClass="customClass" [(ngModel)]="counterValue"  (onCounterChange)="customEvent()"></input-counter>
                 </div>
                 <!-- end col -->
             </div>
@@ -84,6 +86,7 @@
 </div>
 
 </div>
+
 
 
 

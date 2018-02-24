@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AlertModule } from 'ngx-bootstrap';
+import { InputCounterComponent } from 'angular2-input-counter';
+
 
 import { AppComponent } from './app.component';
 import { ProductComponent } from './components/product/product.component';
@@ -18,6 +20,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     AppComponent,
     ProductComponent,
     NavbarComponent,
+    InputCounterComponent,
     ContactComponent,
     ProductDetailsComponent
   ],
