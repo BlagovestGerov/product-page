@@ -14,6 +14,7 @@ import {AppRoutesModule} from './app-routing.module';
 import { ContactComponent } from './components/contact/contact.component';
 import { ProductService } from './core/services/product.service';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { NgxSmartModalModule, NgxSmartModalService } from 'ngx-smart-modal';
 
 @NgModule({
   declarations: [
@@ -28,9 +29,10 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     BrowserModule,
     FormsModule,
     AppRoutesModule,
+    NgxSmartModalModule.forRoot(),
     AlertModule.forRoot()
   ],
-  providers: [ProductService],
+  providers: [ProductService, NgxSmartModalService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
